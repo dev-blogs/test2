@@ -12,4 +12,4 @@ do
 	mv $new $old
 	sleep 1
 done | awk '/>/ { $1 = "in:		"; print }
-			'/</ { $1 = "out:	"; print }'
+			/</ { $1 = "out:	"; print }'
