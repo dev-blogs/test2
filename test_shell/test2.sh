@@ -11,5 +11,5 @@ do
 	diff $old $new
 	mv $new $old
 	sleep 1
-done | awk '/>/ { print $2 }
-			/</ { print $2 }'
+done | awk '/>/ { print "user $2 is loged in" }
+			/</ { print "user $2 is logged out" }'
