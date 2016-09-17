@@ -5,6 +5,7 @@ new=/tmp/watchfor2.$$
 
 >$old
 
+trap "rm -f $new $old; exit 1" 1, 2, 15
 while :
 do
 	who > $new
